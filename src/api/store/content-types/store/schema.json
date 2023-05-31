@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "singularName": "store",
+    "pluralName": "stores",
+    "displayName": "Store",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logoUrl": {
+      "type": "string"
+    },
+    "imgUrl": {
+      "type": "json"
+    },
+    "location": {
+      "type": "string"
+    },
+    "memberNumber": {
+      "type": "integer"
+    },
+    "member_card": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member-card.member-card",
+      "mappedBy": "store"
+    }
+  }
+}

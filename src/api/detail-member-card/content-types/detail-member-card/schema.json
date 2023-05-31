@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "detail_member_cards",
+  "info": {
+    "singularName": "detail-member-card",
+    "pluralName": "detail-member-cards",
+    "displayName": "DetailMemberCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "point": {
+      "type": "integer"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "member_card": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member-card.member-card"
+    },
+    "openDate": {
+      "type": "date",
+      "default": "2023-05-31"
+    }
+  }
+}

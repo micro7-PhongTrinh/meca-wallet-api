@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "member_cards",
+  "info": {
+    "singularName": "member-card",
+    "pluralName": "member-cards",
+    "displayName": "MemberCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "imgUrl": {
+      "type": "string"
+    },
+    "store": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::store.store",
+      "inversedBy": "member_card"
+    }
+  }
+}
